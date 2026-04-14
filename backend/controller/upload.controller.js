@@ -8,7 +8,7 @@ export const uploadFile = async (req, res) => {
     console.log("FILE:", req.file);
 
     const { name } = req.body;
-
+ 
     if (!name || !req.file) {
       return res.status(400).json({
         message: "name and file is required!",
