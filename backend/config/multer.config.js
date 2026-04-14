@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
     filename:function(req,file,cb){
         const uniqueName = uuid()
         const ext = path.extname(file.originalname) 
-        cb(uniqueName+ext)
+        cb(null,uniqueName+ext)
     }
 })
 
